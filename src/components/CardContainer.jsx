@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import Grid from '@mui/material/Grid';
 import Card from './Card';
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -7,7 +9,7 @@ import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
 
 const CardContainer = () => {
   return (
-    <Grid container spacing={5} justifyContent="center">
+    <Grid container spacing={4}>
       <Grid item xs={3}>
         <Card
           icon={<StorefrontIcon fontSize="large" />}

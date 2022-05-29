@@ -1,7 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: 'Roboto';
-  color: grey;
+}
+body {
+  background: #09131b;
+  color: white;
+}
+img {
+  width: 100%;
+  height: 20vh;
+}
+.css-1ld3gvx-MuiButtonBase-root-MuiTab-root.Mui-selected.Mui-selected {
+  background: #ed7d3a;
+}
+.homeContainer {
+  background: center/cover url('img/background.png');
 }
