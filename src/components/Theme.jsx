@@ -14,14 +14,6 @@ const theme = createTheme({
         },
       },
     },
-    // MuiTab: {
-    //   // general overrides for your material tab component here
-    //   styleOverrides: {
-    //     root: {
-    //       backgroundColor: '#ED7D3A',
-    //     },
-    //   },
-    // },
   },
 });
 

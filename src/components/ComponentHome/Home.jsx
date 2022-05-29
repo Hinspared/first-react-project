@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import ResponsiveAppBar from './AppBar';
 import CardContainer from './CardContainer';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './Theme';
+import theme from '../Theme';
 import {
   Stack,
   Typography,
@@ -17,20 +16,19 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 export default function Home() {
   return (
-    <div className="homeContainer">
-      <ResponsiveAppBar />
+    <>
       <Container maxWidth="lg">
         <Stack spacing={2} alignItems="center">
-          <Typography variant="h6" color="initial" component="h2">
+          <Typography variant="h6" color="inherit" component="h2">
             THE TRAVEL GUIDE APP
           </Typography>
-          <Typography variant="h1" color="initial" component="h1">
+          <Typography variant="h1" color="inherit" component="h1">
             TRAVELLO
           </Typography>
           <Typography
             variant="body1"
-            color="initial"
-            component="p"
+            color="inherit"
+            component="span"
             sx={{ fontStyle: 'italic' }}
           >
             Travel booking just a click away
@@ -40,6 +38,7 @@ export default function Home() {
               id="outlined-basic"
               variant="outlined"
               placeholder="Where do you want to go?"
+              inputProps={{ style: { color: 'white', width: '12rem' } }}
             />
             <Button variant="contained">
               <SearchOutlinedIcon />
@@ -61,7 +60,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={2}></Grid>
           <Grid item xs={6}>
-            <Typography variant="body2" color="inherit" component="p">
+            <Typography variant="body2" color="inherit" component="span">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Inventore in facere, asperiores illum cumque iste dignissimos,
               necessitatibus optio molestias laudantium alias nihil accusamus
@@ -70,6 +69,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </>
   );
 }

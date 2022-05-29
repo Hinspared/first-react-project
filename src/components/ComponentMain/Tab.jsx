@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import hotels from '../hotel.json';
+import hotels from '../../hotel.json';
 import HotelCard from './HotelCard';
 import Grid from '@mui/material/Grid';
 
@@ -21,7 +21,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography component="span">{children}</Typography>
         </Box>
       )}
     </div>
@@ -56,7 +56,6 @@ export default function BasicTabs() {
           onChange={handleChange}
           centered
           textColor="inherit"
-          // indicatorColor="none"
           TabIndicatorProps={{
             style: {
               display: 'none',
@@ -79,7 +78,7 @@ export default function BasicTabs() {
       </Box>
       {hotels.map((country) => (
         <TabPanel key={country.id} value={value} index={country.id}>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} component="span">
             {country.hotels.map((h, i) => (
               <HotelCard hotel={h} key={i} />
             ))}
