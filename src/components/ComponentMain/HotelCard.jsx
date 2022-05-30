@@ -14,13 +14,22 @@ export default function HotelCard({ hotel }) {
           </Typography>
         </Box>
         <Box sx={{ padding: '0.2rem' }}>
-          <Rating
-            name="read-only"
-            value={hotel.rating}
-            precision={0.1}
-            readOnly
-            size="small"
-          />
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'baseline',
+            }}
+            justifyContent="center"
+          >
+            <Rating
+              name="read-only"
+              value={hotel.rating}
+              precision={0.1}
+              readOnly
+              size="small"
+            />
+          </Box>
+
           <Box
             sx={{
               display: 'flex',

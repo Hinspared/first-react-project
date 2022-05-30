@@ -7,14 +7,12 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+import { Link } from 'react-scroll';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
-import { ThemeProvider, createTheme } from '@mui/material';
+import TestimonialContainer from './ComponentMain/AboutContainer';
 
-const pages = ['home', 'about', 'Blog'];
+const pages = ['home', 'about', 'pricing'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -87,9 +85,20 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="right">{page}</Typography>
+                  <Link to={page}>
+                    <Typography textAlign="right">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
+              {/* <MenuItem onClick={handleCloseNavMenu}>
+                <Link href="Home">Home</Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link>About</Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link>Pricing</Link>
+              </MenuItem> */}
             </Menu>
           </Box>
           <Box
@@ -110,7 +119,7 @@ const ResponsiveAppBar = () => {
                   display: 'block',
                 }}
               >
-                {page}
+                <Link to={page}>{page}</Link>
               </Button>
             ))}
           </Box>

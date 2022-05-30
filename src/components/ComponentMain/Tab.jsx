@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import hotels from '../../hotel.json';
+import hotels from '../../data.json';
 import HotelCard from './HotelCard';
 import Grid from '@mui/material/Grid';
 

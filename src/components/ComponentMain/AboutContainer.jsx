@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Slider from './Slider';
 import Info from './Info';
+import Slider from './Slider';
 
-export default function TestimonialContainer() {
+export default function AboutContainer() {
   return (
     <>
-      <Container maxWidth="md">
+      <Container maxWidth="md" id="about">
         <Typography
           variant="h6"
           color="inherit"
@@ -15,9 +15,9 @@ export default function TestimonialContainer() {
           textAlign="center"
           margin={5}
         >
-          TESTIMONIALS
+          ABOUT
         </Typography>
-        <Slider />
+        <Slider sx={{ marginBottom: '10rem' }} />
         <Info />
       </Container>
     </>

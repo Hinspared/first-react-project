@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 export default function PlanCards() {
   return (
     <>
-      <Container maxWidth="md" sx={{ marginTop: '10rem' }}>
+      <Container maxWidth="md">
         <Grid container spacing={3}>
           <PlanCard
             price={39}

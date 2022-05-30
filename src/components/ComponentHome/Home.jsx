@@ -17,15 +17,15 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 export default function Home() {
   return (
     <>
-      <Container maxWidth="lg">
-        <Stack spacing={2} alignItems="center">
+      <Container maxWidth="lg" id="home">
+        <Stack spacing={2} alignItems="center" marginBottom={20}>
           <Typography variant="h6" color="inherit" component="h2">
             THE TRAVEL GUIDE APP
           </Typography>
           <Typography variant="h1" color="inherit" component="h1">
             TRAVELLO
           </Typography>
-          <Typography
+          {/* <Typography
             variant="body1"
             color="inherit"
             component="span"
@@ -43,7 +43,7 @@ export default function Home() {
             <Button variant="contained">
               <SearchOutlinedIcon />
             </Button>
-          </Box>
+          </Box> */}
         </Stack>
         <CardContainer />
         <Grid
@@ -60,7 +60,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={2}></Grid>
           <Grid item xs={6}>
-            <Typography variant="body2" color="inherit" component="span">
+            <Typography variant="body2" color="inherit">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Inventore in facere, asperiores illum cumque iste dignissimos,
               necessitatibus optio molestias laudantium alias nihil accusamus
