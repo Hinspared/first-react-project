@@ -13,16 +13,19 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import CarouselCards from './CarouselCards';
 
 export default function Home() {
+  const matches = useMediaQuery('(min-width:800px)');
   return (
     <>
       <Container maxWidth="lg" id="home">
         <Stack spacing={2} alignItems="center" marginBottom={20}>
-          <Typography variant="h6" color="inherit" component="h2">
+          <Typography variant="body1" color="inherit" component="h2">
             THE TRAVEL GUIDE APP
           </Typography>
-          <Typography variant="h1" color="inherit" component="h1">
+          <Typography variant="h2" color="inherit" component="h1">
             TRAVELLO
           </Typography>
           {/* <Typography
@@ -45,21 +48,24 @@ export default function Home() {
             </Button>
           </Box> */}
         </Stack>
-        <CardContainer />
+        {/* <CardContainer /> */}
+        {matches ? <CardContainer /> : <CarouselCards />}
         <Grid
           container
-          spacing={6}
+          spacing={3}
           marginTop={15}
           paddingBottom={10}
           marginBottom={5}
         >
           <Grid item xs={4}>
-            <Typography variant="h5" color="inherit" component="h5">
-              Easily Find awesome places to travel this year
-            </Typography>
+            <Box>
+              <Typography variant="body1" color="inherit" component="h5">
+                Easily Find awesome places to travel this year
+              </Typography>
+            </Box>
           </Grid>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={6}>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={7}>
             <Typography variant="body2" color="inherit">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Inventore in facere, asperiores illum cumque iste dignissimos,

@@ -2,8 +2,11 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material';
 import Slide from './Slide';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Slider(props) {
+  const matches = useMediaQuery('(min-width:800px)');
+
   const items = [
     {
       name: 'Dr.Steve Watson,Greenland Stuido in.',
@@ -22,12 +25,12 @@ export default function Slider(props) {
     },
   ];
 
+  // const buttonVis = matches
+  //   ? navButtonsAlwaysVisible
+  //   : (navButtonsAlwaysVisible = false);
+
   return (
-    <Carousel
-      autoPlay={false}
-      navButtonsAlwaysVisible={true}
-      sx={{ marginBottom: '10rem' }}
-    >
+    <Carousel autoPlay={false} sx={{ marginBottom: '10rem' }}>
       {items.map((item, i) => (
         <Slide
           key={i}

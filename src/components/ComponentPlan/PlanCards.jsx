@@ -7,7 +7,7 @@ export default function PlanCards() {
   return (
     <>
       <Container maxWidth="md">
-        <Grid container spacing={3}>
+        <Grid container spacing={3} justifyContent="center">
           <PlanCard
             price={39}
             type="Personal"

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import airplane from '../../img/airplane.png';
+import luggage from '../../img/luggage.png';
 
 export default function Info() {
   return (
     <Box>
       <Grid container spacing={4}>
         <Grid item xs={4}>
-          <img
-            src="https://cdn.pixabay.com/photo/2020/05/25/17/03/travel-5219496_960_720.jpg"
-            alt="travel"
-          />
+          <img src={airplane} alt="travel" />
         </Grid>
         <Grid item xs={8}>
           <Box>
@@ -51,10 +50,7 @@ export default function Info() {
         </Grid>
 
         <Grid item xs={4}>
-          <img
-            src="https://cdn.pixabay.com/photo/2015/09/09/21/31/luggage-933487_960_720.jpg"
-            alt="travel"
-          />
+          <img src={luggage} alt="travel" />
         </Grid>
       </Grid>
     </Box>

@@ -14,28 +14,28 @@ const CardContainer = () => {
         <Card
           icon={<StorefrontIcon fontSize="large" />}
           name="100+ Options"
-          desctiption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         />
       </Grid>
       <Grid item xs={3}>
         <Card
           icon={<LocalFireDepartmentIcon fontSize="large" />}
           name="Good Quality"
-          desctiption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         />
       </Grid>
       <Grid item xs={3}>
         <Card
           icon={<AssessmentOutlinedIcon fontSize="large" />}
           name="Easy Interface"
-          desctiption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         />
       </Grid>
       <Grid item xs={3}>
         <Card
           icon={<LaptopChromebookIcon fontSize="large" />}
           name="Tracking Code"
-          desctiption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         />
       </Grid>
     </Grid>

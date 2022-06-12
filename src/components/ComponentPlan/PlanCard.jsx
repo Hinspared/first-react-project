@@ -17,9 +17,9 @@ const Item = ({ text }) => {
   return (
     <>
       <ListItem>
-        <ListItemIcon>
+        {/* <ListItemIcon>
           <CheckIcon color="primary" />
-        </ListItemIcon>
+        </ListItemIcon> */}
         <Typography variant="subtitle" color="initial">
           {text}
         </Typography>

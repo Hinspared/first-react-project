@@ -7,10 +7,10 @@ import Box from '@mui/material/Box';
 import hotels from '../../data.json';
 import HotelCard from './HotelCard';
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -43,6 +43,8 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
+  const matches = useMediaQuery('(min-width: 600px');
+  const condition = matches ? 'none' : '';
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -58,7 +60,7 @@ export default function BasicTabs() {
           textColor="inherit"
           TabIndicatorProps={{
             style: {
-              display: 'none',
+              display: condition,
             },
           }}
         >
@@ -68,7 +70,7 @@ export default function BasicTabs() {
               key={country.id}
               {...a11yProps(country.id)}
               sx={{
-                m: '.5rem',
+                // m: '.5rem',
                 borderRadius: '2rem',
               }}
               wrapped
